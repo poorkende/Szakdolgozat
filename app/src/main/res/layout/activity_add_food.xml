@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".add_food">
+
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter food name"
+        android:padding="16dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textAlignment="gravity"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Keresés gomb -->
+
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:padding="8dp"
+        android:text="Search"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        app:layout_constraintTop_toBottomOf="@id/searchInput" />
+
+    <Button
+        android:id="@+id/breakfast_button"
+        android:layout_width="115dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="5dp"
+        android:backgroundTint="@color/white"
+        android:foregroundGravity="center"
+        android:text="Breakfast"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/lunch_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/lunch_button"
+        android:layout_width="115dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="@color/white"
+        android:foregroundGravity="center"
+        android:text="Lunch"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/dinner_button"
+        android:layout_width="115dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/white"
+        android:foregroundGravity="center"
+        android:text="Dinner"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/lunch_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/snack_button"
+        android:layout_width="115dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/white"
+        android:foregroundGravity="center"
+        android:text="Snack"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        tools:ignore="SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

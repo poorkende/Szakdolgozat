@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/calorie_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/calorie_base"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_food_button"
+        android:layout_width="114dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/white"
+        android:drawableBottom="@drawable/baseline_food_bank_24"
+        android:foregroundGravity="center"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calorie_textView"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/add_water_button"
+        android:layout_width="114dp"
+        android:layout_height="123dp"
+        android:backgroundTint="@color/white"
+        android:drawableBottom="@drawable/baseline_water_drop_24"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/add_food_button"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/add_burnt_cal_button"
+        android:layout_width="114dp"
+        android:layout_height="123dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/white"
+        android:drawableBottom="@drawable/baseline_fitness_center_24"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/add_water_button"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/count_calories_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/count_your_calorie_requirement"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/add_water_button"
+        app:layout_constraintStart_toStartOf="@+id/add_water_button"
+        app:layout_constraintTop_toBottomOf="@+id/burnt_calories_textview" />
+
+    <ProgressBar
+        android:id="@+id/macro_progress_carbs"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="108dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:progressTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/add_food_button"
+        app:layout_constraintStart_toStartOf="@+id/add_food_button"
+        app:layout_constraintTop_toBottomOf="@+id/current_cal_textview" />
+
+    <ProgressBar
+        android:id="@+id/macro_progress_fat"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="108dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:progressTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/add_water_button"
+        app:layout_constraintStart_toStartOf="@+id/add_water_button"
+        app:layout_constraintTop_toBottomOf="@+id/current_cal_textview" />
+
+    <ProgressBar
+        android:id="@+id/macro_progress_protein"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="108dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:progressTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/add_burnt_cal_button"
+        app:layout_constraintStart_toStartOf="@+id/add_burnt_cal_button"
+        app:layout_constraintTop_toBottomOf="@+id/current_cal_textview" />
+
+    <TextView
+        android:id="@+id/protein_gram_textview"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_margin="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/macro_progress_protein"
+        app:layout_constraintStart_toStartOf="@+id/macro_progress_protein"
+        app:layout_constraintTop_toBottomOf="@+id/macro_progress_protein" />
+
+    <TextView
+        android:id="@+id/fat_gram_textview"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_margin="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/macro_progress_fat"
+        app:layout_constraintStart_toStartOf="@+id/macro_progress_fat"
+        app:layout_constraintTop_toBottomOf="@+id/macro_progress_fat" />
+
+    <TextView
+        android:id="@+id/carb_gram_textview"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_margin="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/macro_progress_carbs"
+        app:layout_constraintStart_toStartOf="@+id/macro_progress_carbs"
+        app:layout_constraintTop_toBottomOf="@+id/macro_progress_carbs" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/carbs"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/macro_progress_carbs"
+        app:layout_constraintEnd_toEndOf="@+id/macro_progress_carbs"
+        app:layout_constraintStart_toStartOf="@+id/macro_progress_carbs" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="@string/protein"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/macro_progress_protein"
+        app:layout_constraintStart_toStartOf="@+id/macro_progress_protein" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="@string/fats"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/macro_progress_fat"
+        app:layout_constraintStart_toStartOf="@+id/macro_progress_fat" />
+
+    <ProgressBar
+        android:id="@+id/cal_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:progressTint="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/add_food_button"
+        app:layout_constraintTop_toBottomOf="@+id/calories_textview" />
+
+    <TextView
+        android:id="@+id/calories_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Calories: "
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_water_button" />
+
+    <TextView
+        android:id="@+id/current_cal_textview"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:layout_marginTop="12dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cal_progress" />
+
+    <TextView
+        android:id="@+id/burnt_calories_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Burnt calories\n"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fat_gram_textview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

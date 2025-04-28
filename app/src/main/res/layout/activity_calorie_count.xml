@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".calorie_count"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/calorie_counting_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calorie_counter"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/age_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/your_age"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorie_counting_textview" />
+
+    <EditText
+        android:id="@+id/age_edittext"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:hint="@string/type_here_1"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="#757575"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age_textview"
+        tools:ignore="Autofill,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_name2"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/name_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/calorie_counting_textview" />
+
+    <EditText
+        android:id="@+id/name_edittext"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:hint="@string/type_here"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="#757575"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age_textview"
+        tools:ignore="Autofill,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/weight_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/current_weight2"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/age_edittext" />
+
+    <EditText
+        android:id="@+id/weight_edittext"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:hint="@string/type_here"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="#757575"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weight_textview"
+        tools:ignore="Autofill,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/hight_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/your_height"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight_edittext" />
+
+    <EditText
+        android:id="@+id/hight_edittext"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:hint="@string/type_here_2"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="#757575"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hight_textview"
+        tools:ignore="Autofill,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/resoult_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:text="@string/your_result2"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorie_goal_edittext" />
+
+    <Button
+        android:id="@+id/count_resoult_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/count_my_resoult"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/resoult_textview"
+        app:layout_constraintTop_toBottomOf="@+id/calorie_goal_edittext"/>
+
+    <RadioGroup
+        android:id="@+id/gender_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/hight_edittext"
+        app:layout_constraintStart_toStartOf="@+id/hight_edittext"
+        android:layout_marginTop="10dp">
+
+        <!-- Férfi rádiógomb -->
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:textColor="#616161"
+            android:textSize="25sp"
+            android:checked="true" /> <!-- Alapértelmezett kiválasztott elem -->
+
+        <!-- Nő rádiógomb -->
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            android:textColor="#616161"
+            android:textSize="25sp"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/protein_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/protein2"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/name_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/name_edittext" />
+
+    <EditText
+        android:id="@+id/protein_edittext"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:hint="@string/percent3"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="#757575"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/protein_textview"
+        tools:ignore="Autofill,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/carb_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/carbs2"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/name_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/protein_edittext" />
+
+    <EditText
+        android:id="@+id/carb_edittext"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:hint="@string/percent"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="#757575"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carb_textview"
+        tools:ignore="Autofill,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fat_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fats2"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/name_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/carb_edittext" />
+
+    <EditText
+        android:id="@+id/fat_edittext"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:hint="@string/percent2"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="#757575"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fat_textview"
+        tools:ignore="Autofill,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/calorie_goal_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calorie_goals"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/name_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/fat_edittext" />
+
+    <EditText
+        android:id="@+id/calorie_goal_edittext"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:hint="@string/type_here"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="#757575"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorie_goal_textview"
+        tools:ignore="Autofill,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/bmi_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:text="@string/your_bmi"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resoult_textview"/>
+
+    <TextView
+        android:id="@+id/calorie_goal_result_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:text="@string/your_calorie_goal"
+        android:textColor="#616161"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_result"/>
+
+    <Spinner
+        android:id="@+id/activitySpinner"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:spinnerMode="dropdown"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/gender_radiogroup"
+        app:layout_constraintStart_toStartOf="@+id/gender_radiogroup"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
