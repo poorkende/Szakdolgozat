@@ -1,7 +1,6 @@
 Az alkalmazás telepítéséhez kövesse az alábbi lépéseket: 
 Nyissa meg az alábbi linket a böngészőjében: 
-➔ [https://drive.google.com/drive/folders/1UkHK4Cj7KglJzUWwA
-7wljx5Vh4b0z5p?usp=drive_link] 
+➔ https://drive.google.com/drive/folders/1UkHK4Cj7KglJzUWwA-7wljx5Vh4b0z5p?usp=drive_link
 A megnyílt oldalon kattintson a Letöltés gombra. 
 A letöltés után a készülékére kerül egy .apk fájl 
 A telepítés előtt szükség lehet arra, hogy engedélyezze az ismeretlen forrásból származó 
